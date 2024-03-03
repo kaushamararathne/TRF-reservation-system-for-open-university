@@ -1,21 +1,21 @@
-{% load static %}
+{% load static %} <!-- Load static files like CSS and JavaScript -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <title>Temporary resident facilities</title> <!-- Title of the webpage -->
 </head>
-<body bgcolor="red">
 
-    <form action="form" method="post">
-    {%csrf_token%}
-        <label for="Name1">user name :</label> <input type="text" name="name">
-        <label for="Name1">user password :</label> <input type="password" name="pw">
-        <button type="submit">SUBMIT.</button>
-        
-    </form>
-    
-    
+<body>
+    {% block content %}
+    <!-- This is where the specific content for this page will be inserted. -->
+    {% endblock %}
+    <button class="btn primary-btn large">button</button>
+
+    <!-- Any additional content or scripts can be added here -->
 </body>
 </html>
