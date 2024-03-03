@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="red">
+
+    <form action="form" method="post">
+    {%csrf_token%}
+        <label for="Name1">user name :</label> <input type="text" name="name">
+        <label for="Name1">user password :</label> <input type="password" name="pw">
+        <button type="submit">SUBMIT</button>
+        
+    </form>
+    
+    
+</body>
+</html>
