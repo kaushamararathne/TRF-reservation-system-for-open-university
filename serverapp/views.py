@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def log(request):
-    return render(request,'login.html')
+    return render(request,'system/login.html')
 
 
 
