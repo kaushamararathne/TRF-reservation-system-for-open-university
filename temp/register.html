@@ -1,0 +1,65 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block content %}
+    <!-- This block overrides the 'content' block of the base template -->
+    
+    <div class="res">
+        <!-- Row for content, centered -->
+
+        <div class="col m-4 text-center">
+            <!-- Column for the main content -->
+            <h2>TRF Connect</h2>
+
+            <h4>The Open University of Sri Lanka (OUSL)</h4>
+            <!-- Heading -->
+            <img class="col-5 m-1" src="{% static 'img/login.png' %}" alt="" srcset="">
+            <!-- Image -->
+            <p>
+                <!-- Paragraph describing the TRF Reservation System -->
+                The Open University of Sri Lanka (OUSL) offers comfortable residential facilities for students through its Regional Centers (RC) in Colombo, Kandy, and Matara. Students engaged in continuous academic activities at OUSL or those from remote areas can apply for accommodation by submitting an application approved by the relevant academic coordinator.
+            </p>
+        </div>
+
+        <div class="col m-1 p-1">
+            <!-- Column for the login form -->
+            <form style="background-color: rgba(88, 126, 158, 0.529);" class="form-control-sm mx-5 p-5" action="loginForm" method="post">
+             {% csrf_token %}
+                <label class="form-label" for=""><h3>Login</h3></label><br>
+                <!-- Login form -->
+                
+                name with initials : <input type="text" name="name" id="name">
+                Regulation number : <input type="text" name="regNo" id="regNo">
+                Faculty : <select name="programme" id="programme">
+                                <option value="nsc">Natural Science</option>
+                                <option value="etech">Engineering technology</option>
+                                <option value="management">Management</option>
+                                <option value="ssc">Social sciences</option>
+                            </select>
+                Registered Center : <select name="center" id="center">
+                                        <option value="crc">Colombo regional center</option>
+                                        <option value="krc">Kandy regional center</option>
+                                        <option value="mrc">Mathara regional center</option>
+                                        <option value="arc">Anuradhapura regional center</option>
+                                        <option value="jrc">Jaffna regional center</option>
+                                    </select>
+                District :          <select name="center" id="center">
+                                        <option value="crc">Colombo</option>
+                                        <option value="krc">Kandy</option>
+                                    </select>
+                <button class="btn btn-primary form-control mt-3 mb-4" type="submit">Login</button><br>
+                <!-- Submit button -->
+                <hr>
+                <!-- Horizontal line -->
+                <div class="col m-1 text-center">
+                    <!-- Additional information section -->
+                    <a href="{% static 'Rules and Regulations - TRF .pdf' %}">Rules and Regulations</a>
+                    <!-- Link to rules and regulations PDF -->
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+<!-- End of 'content' block -->

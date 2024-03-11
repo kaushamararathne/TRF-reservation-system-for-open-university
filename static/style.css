@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 800px) {
+  .res {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 810px) {
+    .res {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; 
+    }
+  }
+  .footer{
+  }

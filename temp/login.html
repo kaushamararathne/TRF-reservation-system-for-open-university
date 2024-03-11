@@ -1,53 +1,51 @@
-{% extends 'system/index.html'%}
+{% extends 'index.html'%}
 {% load static %}
-
 {% block content %}
-<!-- This block overrides the 'content' block of the base template -->
-
-<div class="container">
-    <!-- Container for the main content -->
-
-    <div class="nav">
-        <!-- Navigation section -->
-        <img class="col-3" src="{% static 'img/OU_logo.png' %}" alt="" srcset="">
-        <!-- Image for the navigation -->
-    </div>
-
-    <div class="row justify-content-md-center">
+    <!-- This block overrides the 'content' block of the base template -->
+    
+    <div class="res">
         <!-- Row for content, centered -->
 
         <div class="col m-4 text-center">
             <!-- Column for the main content -->
-            <h3>TRF Reservation System - OUSL</h3>
+            <h2>TRF Connect</h2>
+
+            <h4>The Open University of Sri Lanka (OUSL)</h4>
             <!-- Heading -->
             <img class="col-5 m-1" src="{% static 'img/login.png' %}" alt="" srcset="">
             <!-- Image -->
             <p>
                 <!-- Paragraph describing the TRF Reservation System -->
-                The Open University of Sri Lanka (OUSL) offers comfortable residential facilities for students through its Regional Centers (RC) in Colombo, Kandy, and Matara. These hostels can accommodate over 200 students simultaneously at an affordable daily rate. Students engaged in continuous academic activities at OUSL or those from remote areas can apply for accommodation by submitting an application approved by the relevant academic coordinator.
+                The Open University of Sri Lanka (OUSL) offers comfortable residential facilities for students through its Regional Centers (RC) in Colombo, Kandy, and Matara. Students engaged in continuous academic activities at OUSL or those from remote areas can apply for accommodation by submitting an application approved by the relevant academic coordinator.
             </p>
         </div>
 
         <div class="col m-1 p-1">
             <!-- Column for the login form -->
-            <form style="background-color: rgba(170, 216, 248, 0.176);" class="form-control-sm mx-5 p-5" action="" method="post">
+            <form style="background-color: rgba(6, 96, 160, 0.176);" class="form-control-sm mx-5 p-5" action="accounts/home/" method="post">
+             {% csrf_token %}
                 <label class="form-label" for=""><h3>Login</h3></label><br>
                 <!-- Login form -->
                 <label class="form-label" for="">User Id:</label><br>
-                <input type="text" class="form-control"  name="userId" id=""><br>
+                <input type="text" class="form-control"  name="userName" id="userName"><br>
                 <!-- User ID input field -->
                 <label class="form-label text-right" for="">Password:</label><br>
-                <input type="password" class="form-control"  name="userPw" id=""><br>
+                <input type="password" class="form-control"  name="userPassword" id="userPassword"><br>
                 <!-- Password input field -->
                 <button class="btn btn-primary form-control mt-3 mb-4" type="submit">Login</button><br>
                 <!-- Submit button -->
                 <hr>
+                
                 <!-- Horizontal line -->
                 <div class="col m-1 text-center">
                     <!-- Additional information section -->
                     <a href="{% static 'Rules and Regulations - TRF .pdf' %}">Rules and Regulations</a>
                     <!-- Link to rules and regulations PDF -->
                 </div>
+            </form>
+            <form action="finance/tests/" method="post">
+                {% csrf_token %}
+                <button type="submit">fin</button>
             </form>
         </div>
 

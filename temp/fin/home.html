@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="row">
+      <h2>TRF Connect </h2>
+    </div>
+    <div class="d-flex justify-content-around">
+    <label for=""><h5>User Name : {{mode}} </h5></label>
+      <label for="">User Name : {{name}}</label>
+      <button class="btn btn-dark">logout</button>
+    </div>
+</div>
+
+<div class="d-flex justify-content-around m-5 p-3 border">
+      <form action="search" method="get">
+        <label for="">Type user name here</label>
+      <label for="">std@</label>
+      <input class="btn btn-dark border" type="text" name="" id="" placeholder="Type user name here">      
+      <button class="btn mx-4 btn-dark" type="submit">Search</button>
+    </form>
+  
+</div>
+<div>
+  {{addstudent}}
+</div>
+
+{% endblock %}
+
+

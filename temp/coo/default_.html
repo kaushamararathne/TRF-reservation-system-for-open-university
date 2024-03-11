@@ -1,0 +1,51 @@
+{% extends '../index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="row">
+        <h2>coordinator</h2>
+    </div>
+    <div class="row m-5 border border-dark p-5">
+        <form class = 'm-2 p-3' action="search" method="post">
+            <input type="text" name="search" id="">
+            <button type="submit">Search</button>
+        </form>
+        <table class = 'm-5'>
+            <tr>
+                <td><label for="student_name">Student name:</label></td>
+                <td>hey</td> <!-- Empty cell -->
+            </tr>
+            <tr>
+                <td><label for="registration_number">Registration number:</label></td>
+                <td></td> <!-- Empty cell -->
+            </tr>
+            <tr>
+                <td><label for="refundable_receipt">Receipt No (Refundable):</label></td>
+                <td></td> <!-- Empty cell -->
+            </tr>
+            <tr>
+                <td><label for="accommodation_receipt">Receipt No (Accommodation):</label></td>
+                <td></td> <!-- Empty cell -->
+            </tr>
+        </table>
+        
+        <div class="row">
+            
+    
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col">
+    
+        </div>
+    
+    </div>
+    
+</div>
+
+{% endblock %}
+
+
